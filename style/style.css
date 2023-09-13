@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+/* Red #f44336 or #d50000, Green #4caf50 or #1b5e20 */
+:root {
+    --primary: #03a9f4;
+    --secondary: #0d47a1;
+    --dark-blue: #0d47a1;
+    --dark-gray: #222;
+    --white: #fff;
+    --green: #4caf50;
+    --red: #f44336;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,49 +22,161 @@
 body {
     width: 100vw;
     height: 100vh;
-    color: #fff;
-    position: relative;
-    margin: 0; /* Remove default body margin */
-    background-color: #0E090E;
+    background: #ececec;
+    color: #191919;
+    overflow-x: hidden;
 }
 
-.capa {
-    background-position: center center;
-    background-repeat: no-repeat;
+main {
     width: 100%;
-    height: 100%;
-    margin: 0; /* Remove default margin */
+    height: 100vh;
 }
 
-#start-button {
-    position: absolute;
-    bottom: -12%; /* Adjust this value to center the button vertically */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the button horizontally and vertically */
-    color: white;
-    font-size: 25px;
-    background-color: #7c32f3;
-    padding: 10px 50px;
-    border: none;
-    box-shadow: 0;
-    border-radius: 20px;
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#start-button:hover {
-    background-color: #756d80; /* Change the background color on hover */
+h1 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 0.5rem 0 0 0;
 }
 
-.footer {
-    background-color: #0E090E; /* Background color for the footer */
-    color: #fff; /* Text color */
-    padding: 10px 10px; /* Add some padding to top and bottom */
-    text-align: center; /* Center-align the text */
-    font-size: 20px; /* Adjust the font size as needed */
-    margin: 0; /* Remove default margin */
+/* Class to center text and paragraphs */
+.center {
+    text-align: center;
 }
 
-.footer a {
-    color: #fff; /* Link color in the footer */
-    text-decoration: none; /* Remove underline from links */
+/* div class question with question number and text */
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#numQuestion {
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background: var(--primary);
+    color: #fff;
+    padding: 6px 10px 4px 8px;
+    border-radius: 50%;
+}
+
+#question {
+    margin-left: 1rem;
+}
+
+.question-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Article that contains the complete question */
+.questions {
+    user-select: none;
+    background: #fff;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    margin-bottom: 0.625rem;
+}
+
+.questions ol li {
+    border: 1px solid var(--primary);
+    display: block;
+    margin-bottom: 0.625rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.questions ol li:hover {
+    background: var(--primary);
+    cursor: pointer;
+}
+
+.locked {
+    display: none;
+}
+
+.locked li:hover {
+    display: none;
+}
+
+#instructions {
+    font-size: 1rem;
+    color: #191919;
+    padding: 0.625rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+#notice {
+    color: var(--primary);
+}
+
+#authorship {
+    margin-top: 0.625rem;
+    font-size: 0.75rem;
+}
+
+/* ANIMATION */
+
+/* Animate the input */
+@keyframes blink {
+    0% {
+        filter: drop-shadow(0 0 15px var(--primary));
+        -webkit-filter: drop-shadow(0 0 15px var(--primary));
+        -moz-filter: drop-shadow(0 0 15px var(--primary));
+        -o-filter: drop-shadow(0 0 15px var(--primary));
+        -ms-filter: drop-shadow(0 0 15px var(--primary));
+    }
+    100% {
+    }
+}
+
+.animate {
+    animation: blink .75s infinite alternate;
+}
+
+.appear {
+    animation: appear .5s infinite alternate;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.correct {
+    background: var(--green);
+    animation: appear 0.1s infinite alternate;
+}
+
+.incorrect {
+    background: var(--red);
+    animation: appear 0.1s infinite alternate;
+}
+
+.score {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #03a9f4;
+    font-size: 2rem;
 }

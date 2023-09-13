@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="images/favicon.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="Images/harry-fotor-bg-remover-2023062419455.png">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>HCSSvenger</title>
+    <title>CSSvenger</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header class="cabeca">
-        <div class="layout">
-            <nav class="layoutTesteNav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="main">
-        <section class="content">
-            <h1>HCSSvenger</h1>
-            <article class="center" id="instructions">
-                Read the question and click on the correct answer 🪄
+    <main class="main-screen">
+
+        <section class='contents'>
+
+            <h1>CSSvenger</h1>
+
+            <article class='centered' id='instructions'>
+                Read the question and click on the correct answer 😊
             </article>
-            <article class="questions">
-                <header class="questions">
-                    <span id="numQuestion"></span>
-                    <h2 id="fragen"></h2>
+
+            <article class='questions'>
+                
+                <header class='question'>
+                    <span id='numQuestion'></span>
+                    <h2 id='question'></h2>
                 </header>
-                <div class="bodypart">
-                    <ol type="A" id="alternatives">
-                        <li id="a" value="1A" class="answer" onClick="CheckIfYouGotItRight(1, this)"></li>
-                        <li id="b" value="1B" class="answer" onClick="CheckIfYouGotItRight(1, this)"></li>
-                        <li id="c" value="1C" class="answer" onClick="CheckIfYouGotItRight(1, this)"></li>
+                <!--
+                <figure class='questionImage'>
+                    <img src="images/quiz/compass_rose.png" alt="Question Image" width="200px"/>
+                </figure>
+                -->
+                <div class='body'>
+                    <ol type='A' id='alternatives'>
+                        <li id='a' value='1A' class='answers' onClick='checkIfYouGotItRight(this, this)'></li>
+                        <li id='b' value='1B' class='answers' onClick='checkIfYouGotItRight(this, this)'></li>
+                        <li id='c' value='1C' class='answers' onClick='checkIfYouGotItRight(this, this)'></li>
+                        <li id='d' value='1D' class='answers' onClick='checkIfYouGotItRight(this, this)'></li>
                     </ol>
                 </div>
-                <span id="answerThis"></span>
-                <div id="gameWonScreen"></div>
-                <div id="gameOverScreen">
-                    <p class="gameoverp">Unfortunately, you scored less than 50 points.</p>
-                </div>
             </article>
+            
+            <article id='notice' class='centered'>
+                <input type="range" value='1' min='1' max='10' step='1'
+                name="progress" id="progress" disabled
+                /> <br>
+                <span id='number'></span> of <span id='total'></span>
+            </article>
+        
+            <footer id='authorship' class='centered'>Developed by Priscilla Riese &copy; 2023</footer>
+
         </section>
-        <footer class="center">Developed by Priscilla Riese &copy; 2023</footer>
+
     </main>
+<audio preload src="assets/positive.mp3" id='soundCorrect'></audio>
+<audio preload src="assets/negative.mp3" id='soundIncorrect'></audio>
+<audio preload src="assets/applause.mp3" id='soundApplause'></audio>
 
-    <div class="container">
-        <img class="harrycoder" src="Images/harry-fotor-bg-remover-2023062419455.png" alt="Harry Potter">
-    </div>
+<script src="/js/script.js"></script>
 
-    <script>
-        function redirectToHomePage() {
-            window.location.href = "index.html";
-        }
-        function redirectToNextPage() {
-            window.location.href = "gameOver.html";
-        }
-    </script>
-    <script src="script.js"></script>
 </body>
 </html>

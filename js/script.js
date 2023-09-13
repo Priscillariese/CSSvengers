@@ -36,25 +36,25 @@ const q0 = {
 };
 const q1 = {
     numQuestion   : 1,
-    question     : "Boreal is the same as...",
-    alternativeA : "South",
-    alternativeB : "East",
-    alternativeC : "North",
-    alternativeD : "West",
-    correct      : "North",
+    question     : " Which CSS property is used to define the text color?",
+    alternativeA : "color",
+    alternativeB : "background-color",
+    alternativeC : "text-color",
+    alternativeD : "font-color",
+    correct      : "color",
 };
 const q2 = {
     numQuestion   : 2,
-    question     : "What is the capital of Brazil?",
-    alternativeA : "Rio de Janeiro",
-    alternativeB : "Brasília",
-    alternativeC : "Salvador",
-    alternativeD : "Lisbon",
-    correct      : "Brasília",
+    question     : "Which CSS property is used to add space between letters of text?",
+    alternativeA : "line-height",
+    alternativeB : "word-spacing",
+    alternativeC : "letter-spacing",
+    alternativeD : "text-spacing",
+    correct      : "letter-spacing",
 };
 const q3 = {
     numQuestion   : 3,
-    question     : "Austral is the same as...",
+    question     : "In the world of CSS Avengers, which selector wields the mighty power of Thor to select elements with a specific class?",
     alternativeA : "West",
     alternativeB : "East",
     alternativeC : "North",

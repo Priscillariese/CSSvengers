@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    margin: 0; /* Remove default body margin */
+    background-color: #0E090E;
+}
+
+.capa {
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+#start-button {
+    position: absolute;
+    bottom: -12%; /* Adjust this value to center the button vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the button horizontally and vertically */
+    color: white;
+    font-size: 25px;
+    background-color: #7c32f3;
+    padding: 10px 50px;
+    border: none;
+    box-shadow: 0;
+    border-radius: 20px;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+#start-button:hover {
+    background-color: #756d80; /* Change the background color on hover */
+}
+
+.footer {
+    background-color: #0E090E; /* Background color for the footer */
+    color: #fff; /* Text color */
+    padding: 10px 10px; /* Add some padding to top and bottom */
+    text-align: center; /* Center-align the text */
+    font-size: 20px; /* Adjust the font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.footer a {
+    color: #fff; /* Link color in the footer */
+    text-decoration: none; /* Remove underline from links */
+}

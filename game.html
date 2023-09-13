@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/harry-fotor-bg-remover-2023062419455.png">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>HCSSvenger</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabeca">
+        <div class="layout">
+            <nav class="layoutTesteNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="content">
+            <h1>HCSSvenger</h1>
+            <article class="center" id="instructions">
+                Read the question and click on the correct answer 🪄
+            </article>
+            <article class="questions">
+                <header class="questions">
+                    <span id="numQuestion"></span>
+                    <h2 id="fragen"></h2>
+                </header>
+                <div class="bodypart">
+                    <ol type="A" id="alternatives">
+                        <li id="a" value="1A" class="answer" onClick="CheckIfYouGotItRight(1, this)"></li>
+                        <li id="b" value="1B" class="answer" onClick="CheckIfYouGotItRight(1, this)"></li>
+                        <li id="c" value="1C" class="answer" onClick="CheckIfYouGotItRight(1, this)"></li>
+                    </ol>
+                </div>
+                <span id="answerThis"></span>
+                <div id="gameWonScreen"></div>
+                <div id="gameOverScreen">
+                    <p class="gameoverp">Unfortunately, you scored less than 50 points.</p>
+                </div>
+            </article>
+        </section>
+        <footer class="center">Developed by Priscilla Riese &copy; 2023</footer>
+    </main>
+
+    <div class="container">
+        <img class="harrycoder" src="Images/harry-fotor-bg-remover-2023062419455.png" alt="Harry Potter">
+    </div>
+
+    <script>
+        function redirectToHomePage() {
+            window.location.href = "index.html";
+        }
+        function redirectToNextPage() {
+            window.location.href = "gameOver.html";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
